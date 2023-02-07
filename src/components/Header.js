@@ -1,7 +1,10 @@
+import Button from "./Button"
+
 const Header = () => {
   return (
     <div>
-      Header Component
+      <h1>Shopping List</h1>
+      <Button />
     </div>
   )
 }
