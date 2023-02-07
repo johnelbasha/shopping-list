@@ -2,10 +2,10 @@ import Button from "./Button"
 
 const Header = () => {
   return (
-    <div>
+    <header className='header'>
       <h1>Shopping List</h1>
       <Button />
-    </div>
+    </header>
   )
 }
 
