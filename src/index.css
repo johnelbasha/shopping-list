@@ -1,0 +1,23 @@
+/* need to import some fonts here */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* commented out until font family sorted */
+/* body {
+  font-family: 'Poppins', sans-serif;
+} */
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  /* need to understand what overflow does */
+  overflow: auto; 
+  min-height: 600px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 15px;
+}
