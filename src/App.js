@@ -1,3 +1,4 @@
+import AddItem from "./components/AddItem";
 import Header from "./components/Header";
 import Items from "./components/Items";
 
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <AddItem />
       <Items items={items} />
     </div>
   );
