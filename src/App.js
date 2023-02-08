@@ -22,7 +22,9 @@ function App() {
     return data
   }
 
-  const deleteTask = async (id) => {
+
+
+  const deleteItem = async (id) => {
     await fetch(`http://localhost:5002/items/${id}`, {
       method: 'DELETE'
     })
@@ -34,7 +36,7 @@ function App() {
     <div className="container">
       <Header />
       <AddItem />
-      <Items items={items} onDelete={deleteTask} />
+      <Items items={items} onDelete={deleteItem} />
     </div>
   );
 }
