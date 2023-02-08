@@ -42,3 +42,16 @@
   font-size: 15px;
   font-family: inherit;
 }
+
+.item {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.item h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
