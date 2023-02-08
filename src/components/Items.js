@@ -1,10 +1,10 @@
 import Item from "./Item"
 
-const Items = ({ items }) => {
+const Items = ({ items, onDelete }) => {
   return (
     <>
       {items.map((item, index) => (
-        <Item key={index} item={item} />
+        <Item key={index} item={item} onDelete={onDelete} />
         // <p>item</p>
       ))}
     </>

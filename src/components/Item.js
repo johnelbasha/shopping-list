@@ -1,9 +1,9 @@
 import { FaTrashAlt } from 'react-icons/fa'
 
-const Item = ({ item }) => {
+const Item = ({ item, onDelete }) => {
   return (
     <div className='item'>
-      <h3>{item.name} <FaTrashAlt style={{ color: 'red'}}/></h3>
+      <h3>{item.name} <FaTrashAlt style={{ color: 'red'}} onClick={() => onDelete(item.id)}/></h3>
     </div>
   )
 }

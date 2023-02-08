@@ -22,11 +22,19 @@ function App() {
     return data
   }
 
+  const deleteTask = async (id) => {
+    await fetch(`http://localhost:5002/items/${id}`, {
+      method: 'DELETE'
+    })
+
+    setItems(items.filter((item) => item.id !== id))
+  }
+
   return (
     <div className="container">
       <Header />
       <AddItem />
-      <Items items={items} />
+      <Items items={items} onDelete={deleteTask} />
     </div>
   );
 }
