@@ -3,6 +3,8 @@ import AddItem from "./components/AddItem";
 import Header from "./components/Header";
 import Items from "./components/Items";
 
+const baseURL='http://localhost:5002/items'
+
 function App() {
   const [items, setItems] = useState([])
   
@@ -16,16 +18,30 @@ function App() {
   }, [])
 
   const fetchItems = async () => {
-    const res = await fetch('http://localhost:5002/items');
+    const res = await fetch(baseURL);
     const data = await res.json()
 
     return data
   }
 
+  const addItem = async (item) => {
+    console.log('addItem function called')
+    console.log('title provided was:', item)
 
+    const res = await fetch(baseURL, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(item)
+    })
+
+    const data = await res.json()
+    setItems(...items, data)
+  }
 
   const deleteItem = async (id) => {
-    await fetch(`http://localhost:5002/items/${id}`, {
+    await fetch(`${baseURL}/${id}`, {
       method: 'DELETE'
     })
 
@@ -35,7 +51,7 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <AddItem />
+      <AddItem onAdd={addItem}/>
       <Items items={items} onDelete={deleteItem} />
     </div>
   );
