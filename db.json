@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Jam"
+    },
+    {
+      "id": 2,
+      "name": "bread"
+    },
+    {
+      "id": 3,
+      "name": "milk"
+    },
+    {
+      "id": 4,
+      "name": "eggs"
+    },
+    {
+      "id": 5,
+      "name": "coffee"
+    },
+    {
+      "id": 6,
+      "name": "chicken breast"
+    }
+  ]
+}
