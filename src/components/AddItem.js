@@ -1,8 +1,12 @@
 const AddItem = () => {
   return (
-    <div>
-      AddItem component
-    </div>
+    <form>
+      <div>
+        <label>Item</label>
+        <input type='text' placeholder="add item"/>
+      </div>
+      <input type='submit' value='Save Item'/>
+    </form>
   )
 }
 
