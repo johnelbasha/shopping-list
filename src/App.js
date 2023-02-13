@@ -3,7 +3,7 @@ import AddItem from "./components/AddItem";
 import Header from "./components/Header";
 import Items from "./components/Items";
 
-const baseURL='http://localhost:5002/items'
+const baseURL='https://s-l-api.herokuapp.com/tasks'
 
 function App() {
   const [items, setItems] = useState([])
